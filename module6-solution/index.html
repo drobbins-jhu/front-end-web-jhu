@@ -4,8 +4,10 @@
 <head>
   <title>Lunch Checker</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <script src="angular.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script> -->
   <script src="app.js"></script>
 
   <style>
@@ -25,10 +27,10 @@
     <div class="form-group">
       <input ng-model="lunchInput" ng-style="border" id="lunch-menu" type="text"
         placeholder="list comma separated dishes you usually have for lunch" class="form-control">
-      <label for="lunch-menu">Empty string between commas not counted i.e 'a, ,b'</label>
+      <label for="lunch-menu"><i> string between commas not counted i.e 'a, ,b is two entries'</i></label>
     </div>
     <div class="form-group">
-      <button ng-click="checkLunch()" class="btn btn-default">Check If Too Much</button>
+      <button ng-click="checkLunch()" class="btn btn-outline-primary">Check If Too Much</button>
     </div>
     <div class="form-group message">
       <!-- Your message can go here. -->
