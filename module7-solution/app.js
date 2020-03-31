@@ -4,7 +4,8 @@
   angular.module('ShoppingListCheckOff', [])
     .controller('ToBuyController', ToBuyController)
     .controller('AlreadyBoughtController', AlreadyBoughtController)
-    .service('ShoppingListCheckOffService', ShoppingListCheckOffService);
+    .service('ShoppingListCheckOffService', ShoppingListCheckOffService)
+    .filter('total', Total);
 
   ToBuyController.$inject = ['ShoppingListCheckOffService'];
   AlreadyBoughtController.$inject = ['ShoppingListCheckOffService'];
@@ -26,11 +27,11 @@
 
   function ShoppingListCheckOffService() {
     let toBuyList = [
-      { name: 'cookies', quantity: 10 },
-      { name: 'donuts', quantity: 6 },
-      { name: 'apples', quantity: 12 },
-      { name: 'oranges', quantity: 8 },
-      { name: 'coffee', quantity: 1 }
+      { name: 'cookies', quantity: 13, pricePerItem: 1 },
+      { name: 'donuts', quantity: 6, pricePerItem: 1.50 },
+      { name: 'apples', quantity: 12, pricePerItem: .5 },
+      { name: 'oranges', quantity: 7, pricePerItem: .75 },
+      { name: 'coffee', quantity: 1, pricePerItem: 1 }
     ];
     let alreadyBoughtList = [];
 
@@ -42,6 +43,10 @@
     this.addBoughtItem = (index) => alreadyBoughtList.push(toBuyList.splice(index, 1)[0]);
 
 
+  }
+
+  function Total() {
+    return (item) => `$$$${(item.quantity * item.pricePerItem).toFixed(2)}`;
 
   }
 
