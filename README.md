@@ -10,3 +10,4 @@ David Robbins
 * [Module 5 - Solution](https://drobbins-jhu.github.io/front-end-web-jhu/module5-solution/)
 * [Module 6 - Solution](https://drobbins-jhu.github.io/front-end-web-jhu/module6-solution/)
 * [Module 7 - Solution](https://drobbins-jhu.github.io/front-end-web-jhu/module7-solution/)
+* [Module 8 - Solution](https://drobbins-jhu.github.io/front-end-web-jhu/module8-solution/)
