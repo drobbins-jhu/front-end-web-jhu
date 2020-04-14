@@ -1,0 +1,16 @@
+<style>
+  .emptyMessage {
+    font-weight: bold;
+    color: red;
+    font-size: 1.2em;
+  }
+
+</style>
+<ol>
+  <li ng-repeat="item in controller.items">
+    {{ item.name }}, {{ item.short_name }}, {{ item.description }}
+    <button ng-click="controller.onRemove({index: $index});">Don't want this one!</button>
+  </li>
+  <div ng-if="controller.items.length === 0 && controller.searched" class="emptyMessage">Nothing found</div>
+
+</ol>
