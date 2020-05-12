@@ -35,6 +35,11 @@
         templateUrl: 'src/public/sign-up/sign-up.html',
         controller: 'SignUpController',
         controllerAs: 'reg',
+        // resolve: {
+        //   menuItem: ['$stateParams', 'MenuService', function ($stateParams, MenuService) {
+        //     return MenuService.getMenuItem($stateParams.short_name);
+        //   }]
+        // }
 
       })
       .state('public.info', {

@@ -4,6 +4,8 @@
   angular.module('public')
     .controller('SignUpController', SignUpController);
 
+  // SignUpController.$inject = ['menuItem'];
+
   function SignUpController() {
     var reg = this;
     console.log("fhdslk")

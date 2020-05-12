@@ -10,11 +10,9 @@
     <form name='regForm' novalidate>
 
       <input type="text" name="firstName" placeholder="First Name" ng-model="reg.user.firstName" required>
-      {{ reg.user.firstName }}
       <br>
 
       <input type="text" name="lastName" placeholder="Last Name" ng-model="reg.user.lastName" required>
-      {{ reg.user.lastName }}
       <br>
 
       <input type="email" name="email" placeholder="Email" ng-model="reg.user.email" required>
@@ -32,7 +30,7 @@
 
       <input type="text" name="favorite" placeholder="Favorite Dish" ng-model="reg.user.favorite" required>
       <span ng-if="regForm.favorite.$invalid && regForm.phone.$touched">
-        Phone must be in the format ###-###-####.
+        Need favorite dish
       </span>
       <br>
 
